@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/shiweicc/hr-rpp36-mvp#readme",
   "dependencies": {
+    "axios": "^0.27.2",
     "express": "^4.18.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
