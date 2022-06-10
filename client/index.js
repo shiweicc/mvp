@@ -17,7 +17,7 @@ class App extends React.Component {
       }
 
     getRecipes() {
-        axios.get('/recipes')
+        axios.get('/category')
         .then(data => {
             console.log('success get data!', data);
             this.setState({ category: data.data.meals });

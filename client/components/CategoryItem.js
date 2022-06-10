@@ -9,7 +9,6 @@ const CategoryItem = (props) => {
 
   return (
     <li>{category}</li>
-    // <li>hello</li>
   );
 };
 
