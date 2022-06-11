@@ -3,7 +3,7 @@ const axios = require('axios');
 const getCategoryAPI = (cb) => {
   axios.get('http://www.themealdb.com/api/json/v1/1/list.php?c=list')
   .then(res => {
-    console.log('success get category data from API: ', res.data);
+    console.log('success get category data from API!');
     cb(res.data);
   })
   .catch(err => {

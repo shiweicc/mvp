@@ -12,6 +12,7 @@ const HTML_FILE = path.join(DIST_DIR, 'index.html');
 app.use(express.static(DIST_DIR));
 app.use(express.json());
 app.use(bodyParser.json());
+// app.use(express.urlencoded())
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', function (req, res) {
@@ -20,7 +21,7 @@ app.get('/', function (req, res) {
 
 app.get('/category', (req, res) => {
   getCategoryAPI((data) => {
-    console.log('server get data back from API: ', data);
+    console.log('server get data back from API!');
 
     data.meals.forEach(item => {
       let eachCategory = item.strCategory;
@@ -36,6 +37,23 @@ app.get('/category', (req, res) => {
       })
     })
     res.send(data);
+  })
+});
+
+app.post('/recipe', (req, res) => {
+  let clickedName = Object.keys(req.body)[0];
+  console.log('here in server get /recipe: ', req);
+
+  let recipeQuery = "SELECT * FROM meals WHERE meal_name = '" + clickedName + "';";
+
+  db.query(recipeQuery, (err, result) => {
+    if (err) {
+      console.log('error get recipe in DB!', err);
+      res.send('error get recipe in DB!');
+    } else {
+      console.log('success get recipe in DB!', result);
+      res.send(result)
+    }
   })
 });
 

@@ -5,12 +5,12 @@ const MealList = (props) => {
   // console.log('here in list: ', props.category);
 
   const listMeal = props.meals.map(item => (
-    <MealItem item={item} />
+    <MealItem item={item} onClick={props.onClick} />
   ))
 
   return (
     <div>
-      <h3>Search meals: </h3>
+      <h3>Meals: </h3>
       <ul>
         {listMeal}
       </ul>

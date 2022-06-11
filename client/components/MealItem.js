@@ -6,7 +6,7 @@ const MealItem = (props) => {
   let mealName = props.item.strMeal;
 
   return (
-    <li>{mealName}</li>
+    <li onClick={(e)=>{props.onClick(e)}}>{mealName}</li>
   );
 };
 
