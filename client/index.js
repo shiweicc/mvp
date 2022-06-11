@@ -5,6 +5,7 @@ import CategoryList from './Components/CategoryList';
 import Search from './Components/Search';
 import MealList from './Components/MealList';
 import Display from './Components/Display';
+import style from './style.css';
 
 
 class App extends React.Component {
@@ -77,10 +78,23 @@ class App extends React.Component {
     // }
 
     render() {
+        const myStyle = {
+            backgroundImage: "url('http://static.simpledesktops.com/uploads/desktops/2011/06/30/goodmorning.png')",
+            height:'100vh',
+            width: '110vw',
+            margin: '0px',
+            padding: '0px',
+            marginTop:'-20px',
+            fontSize:'15px',
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+        };
         return (
-            <div>
-                <h1>Welcome to Easy Recipes!!! 🍛 </h1>
+            <div style={myStyle}>
+                <h1>🍽️ Welcome to Easy Recipes!!! 🍛 </h1>
                 <Search onChange={this.handleChange.bind(this)} search={this.handleSearch.bind(this)}/>
+                <h3>😋 Your recipe:</h3>
                 <Display clickMeal={this.state.clickMeal} />
                 <MealList meals={this.state.meals} onClick={this.handleClick.bind(this)}/>
                 <CategoryList category={this.state.category} onClick={this.handleClick.bind(this)}/>

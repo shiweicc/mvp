@@ -10,7 +10,7 @@ const MealList = (props) => {
 
   return (
     <div>
-      <h3>Meals: </h3>
+      <h3>🧆 Meals: </h3>
       <ul>
         {listMeal}
       </ul>

@@ -10,7 +10,7 @@ const CategoryList = (props) => {
 
   return (
     <div>
-      <h3>Meals by categories: </h3>
+      <h3>🥩 Meals by categories: </h3>
       <ul>
         {listCategory}
       </ul>

@@ -37,7 +37,7 @@ const Display = (props) => {
 
     return (
       <div>
-        <h3>Your recipe: </h3>
+        {/* <h3>Your recipe: </h3> */}
         <p>{name}</p>
         <p>{category}</p>
         <p>{ingredients}</p>
