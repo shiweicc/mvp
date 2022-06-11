@@ -80,12 +80,10 @@ class App extends React.Component {
     render() {
         const myStyle = {
             backgroundImage: "url('http://static.simpledesktops.com/uploads/desktops/2011/06/30/goodmorning.png')",
-            height:'100vh',
-            width: '110vw',
-            margin: '0px',
-            padding: '0px',
+            height:'130vh',
+            width: '100vw',
             marginTop:'-20px',
-            fontSize:'15px',
+            fontSize:'16px',
             backgroundPosition: 'center',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',

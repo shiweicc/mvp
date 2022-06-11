@@ -10,6 +10,7 @@ const Display = (props) => {
     let category = meal.strCategory;
     let instruction = meal.strInstructions;
     let youtube = meal.strYoutube;
+    let img = meal.strMealThumb;
 
     const getIngredient = (mealObj) => {
       const ingredientKey = 'strIngredient';
@@ -43,6 +44,7 @@ const Display = (props) => {
         <p>{ingredients}</p>
         <p>{instruction}</p>
         <p onClick={(e)=> {handleYoutube(e)}}>{youtube}</p>
+        <a><img src={img} alt="food img" width={300} height={300}></img></a>
       </div>
     );
   }
