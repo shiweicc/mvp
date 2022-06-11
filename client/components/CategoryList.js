@@ -2,7 +2,7 @@ import React from 'react';
 import CategoryItem from './CategoryItem';
 
 const CategoryList = (props) => {
-  console.log('here in list: ', props.category);
+  // console.log('here in list: ', props.category);
 
   const listCategory = props.category.map(item => (
     <CategoryItem item={item} />

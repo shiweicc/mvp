@@ -7,8 +7,8 @@ DROP SCHEMA IF EXISTS categories;
 CREATE TABLE categories (
   id INT NOT NULL AUTO_INCREMENT,
   category_name VARCHAR(50) NOT NULL,
-  PRIMARY KEY (id),
-  UNIQUE (category_name)
+  PRIMARY KEY (id)
+  -- UNIQUE (category_name)
 );
 
 DROP SCHEMA IF EXISTS meals;
@@ -16,10 +16,11 @@ CREATE TABLE meals (
   id INT NOT NULL AUTO_INCREMENT,
   meal_name VARCHAR(100) NOT NULL,
   instructions VARCHAR(1000),
-  category_id INT NOT NULL,
+  category VARCHAR(100),
   youtube VARCHAR(500),
-  Ingredients VARCHAR(1000),
-  Measures VARCHAR(1000),
-  FOREIGN KEY (category_id) REFERENCES categories(id),
+  ingredients LONGTEXT,
   PRIMARY KEY (id)
 );
+
+
+  -- FOREIGN KEY (category_id) REFERENCES categories(id)
