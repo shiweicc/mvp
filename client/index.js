@@ -14,7 +14,7 @@ class App extends React.Component {
             category: [],
             searchName: '',
             meals:[],
-            clickMeal:{},
+            clickMeal:undefined,
         };
     }
 
@@ -83,7 +83,7 @@ class App extends React.Component {
                 <Search onChange={this.handleChange.bind(this)} search={this.handleSearch.bind(this)}/>
                 <Display clickMeal={this.state.clickMeal} />
                 <MealList meals={this.state.meals} onClick={this.handleClick.bind(this)}/>
-                <CategoryList category={this.state.category}/>
+                <CategoryList category={this.state.category} onClick={this.handleClick.bind(this)}/>
             </div>
         )
     }

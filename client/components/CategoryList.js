@@ -5,7 +5,7 @@ const CategoryList = (props) => {
   // console.log('here in list: ', props.category);
 
   const listCategory = props.category.map(item => (
-    <CategoryItem item={item} />
+    <CategoryItem item={item} onClick={props.onClick}/>
   ))
 
   return (
